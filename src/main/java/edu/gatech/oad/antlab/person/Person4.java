@@ -29,12 +29,12 @@ public class Person4 {
      * @param input the string to be modified
      * @return the modified string
      */
-    private String calc(String input) {
+    private static String calc(String input) {
       //Person 4 put your implementation here
       String result = "";
       char add;
       for(int i = 0; i < input.length(); i++) {
-        result += (1 + input.charAt(i));
+        result += (char) (1 + input.charAt(i));
         }
       return result;
     }
@@ -49,6 +49,10 @@ public class Person4 {
      */
     public String toString(String input) {
       return name + calc(input);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(calc(args[0]));
     }
 
 }
